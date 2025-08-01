@@ -1,6 +1,6 @@
+import uuid
 from pydantic import BaseModel
 from enum import Enum
-from sqlalchemy.dialects.postgresql import UUID  
 from datetime import datetime
 
 class Role(str, Enum):
@@ -23,18 +23,19 @@ class UserLogin(BaseModel):
     username: str
     password: str
 
-
 class RollCallOut(BaseModel):
-    id: UUID
+    id: uuid.UUID
     created_at: datetime
 
+    class Config:
+        from_attributes = True
 
 class RollCallCreate(BaseModel):
     pass
 
 class AttendanceOut(BaseModel):
-    id: UUID
-    roll_call_id: UUID
+    id: uuid.UUID
+    roll_call_id: uuid.UUID
     student_username: str
     timestamp: datetime
 
@@ -42,5 +43,5 @@ class AttendanceOut(BaseModel):
         from_attributes = True
 
 class AttendanceCreate(BaseModel):
-    roll_call_id: UUID
+    roll_call_id: uuid.UUID
     student_username: str
