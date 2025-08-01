@@ -1,0 +1,33 @@
+[project]
+name = "attendanceproto3-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic",
+    "annotated-types",
+    "anyio",
+    "argon2-cffi",
+    "argon2-cffi-bindings",
+    "cffi",
+    "click",
+    "fastapi",
+    "greenlet",
+    "h11",
+    "idna",
+    "mako",
+    "markupsafe",
+    "psycopg2-binary",
+    "pycparser",
+    "pydantic",
+    "pydantic-core",
+    "pyjwt",
+    "python-dotenv",
+    "sniffio",
+    "sqlalchemy",
+    "starlette",
+    "typing-extensions",
+    "typing-inspection",
+    "uvicorn"
+]
